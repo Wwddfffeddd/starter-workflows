@@ -85,8 +85,7 @@ async function checkWorkflow(workflowPath: string, propertiesPath: string): Prom
     if (properties.iconName && !properties.iconName.startsWith("octicon")) {
       try {
         await fs.access(`../../icons/${properties.iconName}.svg`)
-      } catch (e) {
-        workflowErrors.errors.push(`No icon named ${properties.iconName} found`)
+      } catch push(`No icon named ${properties.iconName} found`)
       }
     }
   } catch (e) {
